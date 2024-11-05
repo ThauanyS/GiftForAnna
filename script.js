@@ -81,24 +81,22 @@ function musik() {
 }
 setInterval(musik, 147000);
 function createSnowflake() {
-  const snowflake = document.createElement("div");
-  snowflake.className = "snowflake";
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  snowflake.style.left = `${Math.random() * 100}vw`;
+  snowflake.style.width = `${Math.random() * 10 + 5}px`;
+  snowflake.style.height = snowflake.style.width;
+  snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+  document.body.appendChild(snowflake);
   
-  // Posiciona a bolinha em uma posição horizontal aleatória
-  snowflake.style.left = Math.random() * 100 + "vw";
-
-  document.getElementById("snow").appendChild(snowflake);
-
-  const duration = Math.random() * 3 + 2;
-  snowflake.style.animationDuration = duration + "s";
-
-  // Remove a bolinha ao final da animação para evitar acúmulo
-  snowflake.addEventListener("animationend", () => {
-    snowflake.remove();
-  });
+  // Remover floco de neve após a queda
+  setTimeout(() => {
+      snowflake.remove();
+  }, 5000);
 }
 
-setInterval(createSnowflake, 300);
+// Gerar neve constantemente
+setInterval(createSnowflake, 200);
 
 
 // Função para verificar a senha

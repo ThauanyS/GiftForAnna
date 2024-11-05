@@ -117,38 +117,19 @@ div.pesan span{
   margin-right: 10px;
   background-color: #5f0000;
 }
-/* Estilização para as bolinhas de neve */
-.snowflake {
+ /* Estilo da neve */
+ .snowflake {
   position: absolute;
-  top: -10px; /* Início acima da tela */
-  width: 8px; /* Diâmetro das bolinhas */
-  height: 8px;
-  background-color: rgba(255, 255, 255, 0.6); /* Cor branca com transparência */
-  border-radius: 50%; /* Torna a bolinha arredondada */
-  opacity: 0.7; /* Torna a bolinha mais apagada */
-  pointer-events: none; /* Não interagem com o mouse */
-  animation: fall linear infinite; /* Animação de queda */
+  top: -10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear infinite;
 }
-
 @keyframes fall {
   to {
-    transform: translateY(100vh); /* Cai pela altura total da tela */
-  }
-}
-
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh); /* Cai pela altura total da tela */
-  }
-}
-
-
-@keyframes imgPesan {
-  0%,100%{
-    transform: rotate(10deg);
-  }
-  50%{
-    transform: rotate(-10deg);
+      transform: translateY(100vh);
+      opacity: 0;
   }
 }
