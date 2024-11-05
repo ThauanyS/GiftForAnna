@@ -117,26 +117,25 @@ div.pesan span{
   margin-right: 10px;
   background-color: #5f0000;
 }
-
-#snow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Permite clicar nos elementos abaixo */
-  overflow: hidden;
-}
-
+/* Estilização para as bolinhas de neve */
 .snowflake {
   position: absolute;
   top: -10px; /* Início acima da tela */
-  color: white;
-  font-size: 20px; /* Tamanho dos flocos de neve */
-  opacity: 0.8; /* Transparência dos flocos */
+  width: 8px; /* Diâmetro das bolinhas */
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.6); /* Cor branca com transparência */
+  border-radius: 50%; /* Torna a bolinha arredondada */
+  opacity: 0.7; /* Torna a bolinha mais apagada */
   pointer-events: none; /* Não interagem com o mouse */
   animation: fall linear infinite; /* Animação de queda */
 }
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh); /* Cai pela altura total da tela */
+  }
+}
+
 
 @keyframes fall {
   to {

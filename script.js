@@ -80,11 +80,11 @@ function musik() {
   msk.loop = true;
 }
 setInterval(musik, 147000);
-
 function createSnowflake() {
   const snowflake = document.createElement("div");
   snowflake.className = "snowflake";
-  snowflake.textContent = "❄";
+  
+  // Posiciona a bolinha em uma posição horizontal aleatória
   snowflake.style.left = Math.random() * 100 + "vw";
 
   document.getElementById("snow").appendChild(snowflake);
@@ -92,12 +92,14 @@ function createSnowflake() {
   const duration = Math.random() * 3 + 2;
   snowflake.style.animationDuration = duration + "s";
 
+  // Remove a bolinha ao final da animação para evitar acúmulo
   snowflake.addEventListener("animationend", () => {
     snowflake.remove();
   });
 }
 
 setInterval(createSnowflake, 300);
+
 
 // Função para verificar a senha
 function verifyPassword() {
