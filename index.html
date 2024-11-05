@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Anna Clara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onmouseover="fullLayar()">
+  <div class="login-screen" id="loginScreen">
+    <h2>Digite a senha para continuar</h2>
+    <input type="password" id="passwordInput" placeholder="Senha">
+    <button onclick="verifyPassword()">Entrar</button>
+  </div>
+  
+  <audio src="lagu/Clairo - Juna.mp3" id="lagu"></audio>
+  <div class="bg">
+    <div class="pesan">
+      <img src="img/pesan.png" alt="Mensagem" class="pesan-img" onclick="pesanHilang()">
+      <span>Clique</span>
+    </div>
+    <div class="content">
+      <!-- Texto de contagem regressiva, inicialmente oculto -->
+      
+      <img src="img/CAT.gif" alt="Presente" class="kado">
+      <p class="kata"></p>
+      <button class="iya" onclick="clik(this)">Ver 🤗</button>
+      <div id="countdownText" style="display: none; font-size: 16px; margin-bottom: 10px;"></div>
+
+    </div>
+    
+    <!-- Elemento para a neve -->
+    <div id="snow"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
